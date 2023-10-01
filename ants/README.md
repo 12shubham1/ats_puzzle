@@ -40,7 +40,7 @@ The appropriateness of this was studied visually and using the Kolmogorov-Smirno
 
 ![image info](./imgs/lognormal_fits.png)
 
-Overall, this method still seems sufficiently robust to analyse the trends. This can be seen in the second chart:
+Overall, despite this deviation, this method still seems sufficiently robust to analyse the trends. This can be seen in the chart below:
 
 ![image info](./imgs/lognormal_comparison.png)
 
