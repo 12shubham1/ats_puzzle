@@ -22,4 +22,4 @@ REMOVE_MAP = {
 }
 
 BOARD = 7
-N = 1_000
+N = 10_000

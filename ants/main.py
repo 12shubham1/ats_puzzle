@@ -5,6 +5,8 @@ from scipy import stats
 import time
 import config as c
 import pandas as pd
+import random
+random.seed(1)
 
 
 def run():
