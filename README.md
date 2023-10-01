@@ -8,11 +8,11 @@ Solving ATS ants and signal processing challenge.
 ### **Approach**
 The approach used was as follows:
 
-\1) Run N simulations for the different input cases.
+1) Run N simulations for the different input cases.
 
-\2) Fit a distribution to the sample generated for each case.
+2) Fit a distribution to the sample generated for each case.
 
-\3) Estimate the time taken as the mean of the distribution that best fits.
+3) Estimate the time taken as the mean of the distribution that best fits.
 
 \4) Based on initial analysis, force a lognormal distribution on each sample. This allowed for a comparison of the impact of each variable in the problem: Backtrack, Diagonal and success condition (meet or cross).
 
