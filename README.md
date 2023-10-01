@@ -9,6 +9,7 @@ Solving ATS ants and signal processing challenge.
 ## Question 1: Ants
 To run the code for ants, run the following commands (once this repo has been cloned):
 `cd ants`
+
 `python main.py`
 
 To configure the test, please make changes in the `config.py` file, with the main parameter `N=10_000` defining how many runs to perform for each test case.
