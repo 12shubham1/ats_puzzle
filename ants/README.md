@@ -6,7 +6,7 @@ The approach used was as follows:
 
 1) Run N simulations for the different input cases.
 
-2) Fit a distribution to the sample generated for each case.
+2) Fit a distribution to the sample generated for each case using distfit (https://pypi.org/project/distfit/)
 
 3) Estimate the time taken as the mean of the distribution that best fits.
 
