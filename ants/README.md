@@ -14,7 +14,7 @@ The approach used was as follows:
 
 ### **Results**
 
-(Note: The results below can be replicated by using seed 1 `random.seed(1)` in `main.py` or similar results can be obtained by running the code directly without forcing a seed)
+>Note: The results below can be replicated by using seed 1 `random.seed(1)` in `main.py` or similar results can be obtained by running the code directly without forcing a seed
 
 For each simulation, 10,000 runs were performed, and the results are summarised below:
 
