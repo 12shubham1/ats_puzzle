@@ -15,7 +15,7 @@
 
 >Note: The results below can be replicated by using seed 1 `random.seed(1)` in `main.py` or similar results can be obtained by running the code directly without forcing a seed
 
-For each case, 10,000 simulations were performed, and the results are summarised below:
+For each case, 10,000 simulations were performed (this number provided a right balance for speed and statistical confidence), and the results are summarised below:
 
 #### **Summary**
 <table><tr><th colspan="3" valign="top">Test Name</th><th valign="top"></th><th colspan="2" valign="top">KS D-statistic (goodness of fit)</th><th colspan="2" valign="top">Expected time (seconds) to meet</th></tr>
@@ -36,7 +36,7 @@ From the above, there are 3 variables which were compared by forcing a lognormal
 
 `Backtrack (bool)`, `Diagonal (bool)` and `Objective (str)`. 
 
-The appropriateness of this was studied visually and using the Kolmogorov-Smirnov (KS) test as a measure of ‘goodness of fit’ (see table above). The visual comparison is shown below where the log of the times taken is plotted as a histogram vs the underlying normal distribution backed out from the fitted lognormal distribution. This method is appropriate for all the ‘meet’ objective tests (first four) while starts to deviate in when the objective changes to ‘cross’.
+The appropriateness of this was studied visually and using the Kolmogorov-Smirnov (KS) test as a measure of ‘goodness of fit’ (see table above). The visual comparison is shown below where the log of the times taken is plotted as a histogram vs the underlying normal distribution backed out from the fitted lognormal distribution. This method is appropriate for all the ‘meet’ objective tests (first four) while it starts to deviate in when the objective changes to ‘cross’.
 
 ![image info](./imgs/lognormal_fits.png)
 
