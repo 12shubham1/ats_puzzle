@@ -36,7 +36,7 @@ From the above, there are 3 variables which were compared by forcing a lognormal
 
 `Backtrack (bool)`, `Diagonal (bool)` and `Objective (str)`. 
 
-The appropriateness of this was studied visually and using the Kolmogorov-Smirnov (KS) test as a measure of ‘goodness of fit’ (see table above). The visual comparison is shown below where the log of the times taken is plotted as a histogram vs the underlying normal distribution backed out from the fitted lognormal distribution. This method is appropriate for all the ‘meet’ objective tests (first four) while it starts to deviate in when the objective changes to ‘cross’.
+The appropriateness of this was studied visually and using the Kolmogorov-Smirnov (KS) test as a measure of ‘goodness of fit’ (see table above). The visual comparison is shown below where the log of the times taken is plotted as a histogram vs the underlying normal distribution backed out from the fitted lognormal distribution. This method is appropriate for all the ‘meet’ objective tests (first four) while it starts to deviate when the objective changes to ‘cross’.
 
 ![image info](./imgs/lognormal_fits.png)
 
