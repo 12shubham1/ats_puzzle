@@ -8,6 +8,7 @@ Solving ATS ants and signal processing challenge.
 
 ## Question 1: Ants
 To run the code for ants, run the following commands (once this repo has been cloned):
+
 `cd ants`
 
 `python main.py`
