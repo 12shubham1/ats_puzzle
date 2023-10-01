@@ -2,7 +2,6 @@
 > Two ants start in opposite corners of a regular chessboard. Every 10 seconds, they move from the center of the square they're on to the center of an adjacent square. How long until they both land on the same square? How long until their paths cross (Ant A moving from square K to L and Ant B moving from square L to K)? What happens if we allow the ants to move diagonally? What happens if we restrict ants from moving to their immediately previous square?
 
 ### **Approach**
-The approach used was as follows:
 
 1) Run N simulations for the different input cases.
 
@@ -16,7 +15,7 @@ The approach used was as follows:
 
 >Note: The results below can be replicated by using seed 1 `random.seed(1)` in `main.py` or similar results can be obtained by running the code directly without forcing a seed
 
-For each simulation, 10,000 runs were performed, and the results are summarised below:
+For each case, 10,000 simulations were performed, and the results are summarised below:
 
 #### **Summary**
 <table><tr><th colspan="3" valign="top">Test Name</th><th valign="top"></th><th colspan="2" valign="top">KS D-statistic (goodness of fit)</th><th colspan="2" valign="top">Expected time (seconds) to meet</th></tr>
