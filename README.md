@@ -3,8 +3,10 @@
 Solving ATS ants and signal processing challenge.
 
 ## Setup
-1) Clone the repo
-2) Install the requirements: `pip install -r requirements.txt`
+1) Clone the repo and create a virtualenv
+2) Activate the virtualenv
+3) Install the requirements: `pip install -r requirements.txt`
+
 
 ## Question 1: Ants
 To run the code for ants, run the following commands (once this repo has been cloned):
