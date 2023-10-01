@@ -12,13 +12,13 @@ The approach used was as follows:
 
 4) Based on initial analysis, force a lognormal distribution on each sample. This allowed for a comparison of the impact of each variable in the problem: Backtrack, Diagonal and success condition (meet or cross).
 
-### Results
+### **Results**
 
 (Note: The results below can be replicated by using seed 1 `random.seed(1)` in `main.py` or similar results can be obtained by running the code directly without forcing a seed)
 
 For each simulation, 10,000 runs were performed, and the results are summarised below:
 
-#### Summary
+#### **Summary**
 <table><tr><th colspan="3" valign="top">Test Name</th><th valign="top"></th><th colspan="2" valign="top">KS D-statistic (goodness of fit)</th><th colspan="2" valign="top">Expected time (seconds) to meet</th></tr>
 <tr><td valign="top">Backtrack</td><td valign="top">Diagonal</td><td valign="top">Objective</td><td valign="top">Distribution</td><td valign="top">Best fit</td><td valign="top">Lognormal</td><td valign="top">Best fit</td><td valign="top">lognormal</td></tr>
 <tr><td valign="top">True</td><td valign="top">False</td><td valign="top">Meet</td><td valign="top">Lognormal</td><td valign="top">0.023</td><td valign="top">0.019</td><td valign="top">849</td><td valign="top">842</td></tr>
@@ -31,7 +31,7 @@ For each simulation, 10,000 runs were performed, and the results are summarised 
 <tr><td valign="top">False</td><td valign="top">True</td><td valign="top">Cross</td><td valign="top">Beta</td><td valign="top">0.010</td><td valign="top">0.050</td><td valign="top">3684</td><td valign="top">5012</td></tr>
 </table>
 
-#### Parameter analysis
+#### **Parameter analysis**
 
 From the above, there are 3 variables which were compared by forcing a lognormal distribution: 
 
