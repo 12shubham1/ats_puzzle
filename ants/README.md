@@ -1,4 +1,4 @@
-# Ants**
+# Ants
 {Insert ants here}
 
 ### **Approach**
