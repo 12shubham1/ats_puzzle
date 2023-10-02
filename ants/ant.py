@@ -3,18 +3,21 @@ import config as c
 
 class Ant:
     def __init__(self, is_ant_1:bool=True):
-
         self.prev = None
         self.moveset = None
         self.backtrack = None
         self.diagonal = None
 
+        # Defining start pos based on being ant 1 or 2
         if is_ant_1:
             self.pos = [0,0]
         else:
             self.pos = [c.BOARD,c.BOARD]
     
     def move(self):
+        """
+        Identifying new move and applying it while storing previous location
+        """
         # Store the previous moves
         self.prev_prev = self.prev.copy() if self.prev is not None else None
         self.prev = self.pos.copy()
@@ -27,7 +30,10 @@ class Ant:
         self.pos[0] += curr_move[0]
         self.pos[1] += curr_move[1]
 
-    def _identify_move(self):
+    def _identify_move(self) -> set:
+        """
+        Identify all allowed moves based on ruleset
+        """
         new_move = self.moveset.copy()
         state = 'ALL'
         # If top_left
@@ -59,11 +65,3 @@ class Ant:
             prev_move = set()
 
         return new_move.difference(c.REMOVE_MAP[state].union(prev_move))
-
-
-
-
-
-    
-
-
