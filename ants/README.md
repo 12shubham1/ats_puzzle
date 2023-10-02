@@ -18,7 +18,7 @@
 For each case, 10,000 simulations were performed (this number provided a right balance for speed and statistical confidence), and the results are summarised below:
 
 #### **Summary**
-<table><tr><th colspan="3" valign="top">Test Name</th><th valign="top"></th><th colspan="2" valign="top">KS D-statistic (goodness of fit)</th><th colspan="2" valign="top">Expected time (seconds) to meet</th></tr>
+<table><tr><th colspan="3" valign="top">Test Name</th><th valign="top"></th><th colspan="2" valign="top">KS D-statistic (goodness of fit)</th><th colspan="2" valign="top">Expected time (seconds)</th></tr>
 <tr><td valign="top">Backtrack</td><td valign="top">Diagonal</td><td valign="top">Objective</td><td valign="top">Distribution</td><td valign="top">Best fit</td><td valign="top">Lognormal</td><td valign="top">Best fit</td><td valign="top">lognormal</td></tr>
 <tr><td valign="top">True</td><td valign="top">False</td><td valign="top">Meet</td><td valign="top">Lognormal</td><td valign="top">0.023</td><td valign="top">0.023</td><td valign="top">849</td><td valign="top">849</td></tr>
 <tr><td valign="top">False</td><td valign="top">False</td><td valign="top">Meet</td><td valign="top">Lognormal</td><td valign="top">0.025</td><td valign="top">0.025</td><td valign="top">850</td><td valign="top">850</td></tr>
