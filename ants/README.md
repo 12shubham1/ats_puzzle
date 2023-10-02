@@ -20,10 +20,10 @@ For each case, 10,000 simulations were performed (this number provided a right b
 #### **Summary**
 <table><tr><th colspan="3" valign="top">Test Name</th><th valign="top"></th><th colspan="2" valign="top">KS D-statistic (goodness of fit)</th><th colspan="2" valign="top">Expected time (seconds) to meet</th></tr>
 <tr><td valign="top">Backtrack</td><td valign="top">Diagonal</td><td valign="top">Objective</td><td valign="top">Distribution</td><td valign="top">Best fit</td><td valign="top">Lognormal</td><td valign="top">Best fit</td><td valign="top">lognormal</td></tr>
-<tr><td valign="top">True</td><td valign="top">False</td><td valign="top">Meet</td><td valign="top">Lognormal</td><td valign="top">0.023</td><td valign="top">0.019</td><td valign="top">849</td><td valign="top">842</td></tr>
-<tr><td valign="top">False</td><td valign="top">False</td><td valign="top">Meet</td><td valign="top">Lognormal</td><td valign="top">0.025</td><td valign="top">0.023</td><td valign="top">850</td><td valign="top">845</td></tr>
-<tr><td valign="top">True</td><td valign="top">True</td><td valign="top">Meet</td><td valign="top">Lognormal</td><td valign="top">0.029</td><td valign="top">0.030</td><td valign="top">960</td><td valign="top">963</td></tr>
-<tr><td valign="top">False</td><td valign="top">True</td><td valign="top">Meet</td><td valign="top">Lognormal</td><td valign="top">0026</td><td valign="top">0.029</td><td valign="top">960</td><td valign="top">960</td></tr>
+<tr><td valign="top">True</td><td valign="top">False</td><td valign="top">Meet</td><td valign="top">Lognormal</td><td valign="top">0.023</td><td valign="top">0.023</td><td valign="top">849</td><td valign="top">849</td></tr>
+<tr><td valign="top">False</td><td valign="top">False</td><td valign="top">Meet</td><td valign="top">Lognormal</td><td valign="top">0.025</td><td valign="top">0.025</td><td valign="top">850</td><td valign="top">850</td></tr>
+<tr><td valign="top">True</td><td valign="top">True</td><td valign="top">Meet</td><td valign="top">Lognormal</td><td valign="top">0.029</td><td valign="top">0.029</td><td valign="top">960</td><td valign="top">960</td></tr>
+<tr><td valign="top">False</td><td valign="top">True</td><td valign="top">Meet</td><td valign="top">Lognormal</td><td valign="top">0.026</td><td valign="top">0.026</td><td valign="top">960</td><td valign="top">960</td></tr>
 <tr><td valign="top">True</td><td valign="top">False</td><td valign="top">Cross</td><td colspan="5" rowspan="2" valign="top">*Not possible for ants to meet (explained below)</td></tr>
 <tr><td valign="top">False</td><td valign="top">False</td><td valign="top">Cross</td></tr>
 <tr><td valign="top">True</td><td valign="top">True</td><td valign="top">Cross</td><td valign="top">Gamma</td><td valign="top">0.018</td><td valign="top">0.047</td><td valign="top">4533</td><td valign="top">5016</td></tr>
