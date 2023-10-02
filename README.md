@@ -20,3 +20,10 @@ To configure the test, please make changes in the `config.py` file, with the mai
 The results summary can be found in the `ants/README.md` file
 
 ## Question 2: Signal Processing
+To run the code for the signal processing, run the following commands (once this repo has been cloned):
+
+`cd signal_processing`
+
+`python main.py`
+
+The results summary can be found in the `signal_processing/README.md` file
