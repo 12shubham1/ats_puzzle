@@ -21,10 +21,12 @@ The goal was to try and identify a pattern between the signal data and trade dat
 
 Overall, it was identified that when the signal stayed constant for less than N seconds, there was a trade arriving/identified in the trade data. The parameter N was tuned using a grid search from 0.5 to 1.5 seconds, with the following results:
 
-{insert result}
+![image info](./imgs/parameter_tuning.png)
 
 As evident, there was a parabolic increase in the percentage of trades missed as N was reduced while N \> 0.9 seconds ensured all trades were identified. Conversely, as N was increased past 1 second, the number of incorrect predictions increased linearly past 100% of the number of trades as the time window exceeded 1.4 seconds. Therefore, a working window of between 0.9 to 1seconds is identified within which the number of missing trades = 0 and number of wrong predictions = 0.
 
 The full signal and trade data is plotted in the figures below. To demonstrate the point, different comparisons are done where the constant time window is set to 0.5s, 0.95s and 1.5s.
 
-{insert results}
+![image info](./imgs/0_5s.png)
+![image info](./imgs/0_95spng)
+![image info](./imgs/1_5s.png)
