@@ -42,9 +42,9 @@ class Processor:
             ax.step(res.index, res.signal, where='post')
             # Plotting all trades correctly caught
             correct = (res['Trade'] == res['predict']) & (res['Trade'] == 1.0)
-            ax.scatter(res[correct].index, res[correct].signal, c='g', label='Correct')
-            ax.scatter(res[missed].index, res[missed].signal, c='r', label='Missed')
-            ax.scatter(res[incorrect].index, res[incorrect].signal, c='k', label='Wrong')
+            ax.scatter(res[correct].index, res[correct].signal, c='lime', label=f'Correct: {100-round(100*len(missing)/len(self.trades.data), 2)}%')
+            ax.scatter(res[missed].index, res[missed].signal, c='r', label=f'Missing: {round(100*len(missing)/len(self.trades.data), 2)}%')
+            ax.scatter(res[incorrect].index, res[incorrect].signal, c='k', label=f'Wrong: {round(100*len(wrong)/len(self.trades.data), 2)}%')
             ax.set_xlabel('Timestamp (s)')
             ax.set_ylabel('Signal')
             ax.legend()
