@@ -17,4 +17,6 @@ To run the code for ants, run the following commands (once this repo has been cl
 
 To configure the test, please make changes in the `config.py` file, with the main parameter `N=10_000` defining how many runs to perform for each test case.
 
+The results summary can be found in the `ants/README.md` file
+
 ## Question 2: Signal Processing
