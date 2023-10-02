@@ -33,7 +33,7 @@ As evident, there was a parabolic reduction in the percentage of trades missed a
 |:---:|:---:|:---:|:---:|
 | Between 0.9s to 1s | 100 | 0 | 0 |
 | Less than 0.9s | < 100 | > 0 | 0 |
-| Greater than 0.9s | 100 | 0 | > 0 |
+| Greater than 1s | 100 | 0 | > 0 |
 
 
 
