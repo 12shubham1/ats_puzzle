@@ -35,6 +35,11 @@ As evident, there was a parabolic increase in the percentage of trades identifie
 
 The full signal and trade data is plotted in the figures below. To demonstrate the point, different comparisons are done where the constant time window is set to 0.5s, 0.95s and 1.5s.
 
+### 0.5s Time Window: Some trades were missed
 ![image info](./imgs/0_5s.png)
+
+### 0.95s Time Window: All trades were picked up and no wrong predictions
 ![image info](./imgs/0_95s.png)
+
+### 1.5s Time Window: All trades were picked up but there was also wrong predictions
 ![image info](./imgs/1_5s.png)
