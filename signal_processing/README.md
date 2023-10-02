@@ -28,5 +28,5 @@ As evident, there was a parabolic increase in the percentage of trades missed as
 The full signal and trade data is plotted in the figures below. To demonstrate the point, different comparisons are done where the constant time window is set to 0.5s, 0.95s and 1.5s.
 
 ![image info](./imgs/0_5s.png)
-![image info](./imgs/0_95spng)
+![image info](./imgs/0_95s.png)
 ![image info](./imgs/1_5s.png)
