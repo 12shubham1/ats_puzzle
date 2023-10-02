@@ -26,8 +26,8 @@ For each case, 10,000 simulations were performed (this number provided a right b
 <tr><td valign="top">False</td><td valign="top">True</td><td valign="top">Meet</td><td valign="top">Lognormal</td><td valign="top">0.026</td><td valign="top">0.026</td><td valign="top">960</td><td valign="top">960</td></tr>
 <tr><td valign="top">True</td><td valign="top">False</td><td valign="top">Cross</td><td colspan="5" rowspan="2" valign="top">*Not possible for ants to meet (explained below)</td></tr>
 <tr><td valign="top">False</td><td valign="top">False</td><td valign="top">Cross</td></tr>
-<tr><td valign="top">True</td><td valign="top">True</td><td valign="top">Cross</td><td valign="top">Gamma</td><td valign="top">0.018</td><td valign="top">0.047</td><td valign="top">4533</td><td valign="top">5016</td></tr>
-<tr><td valign="top">False</td><td valign="top">True</td><td valign="top">Cross</td><td valign="top">Beta</td><td valign="top">0.010</td><td valign="top">0.050</td><td valign="top">3684</td><td valign="top">5012</td></tr>
+<tr><td valign="top">True</td><td valign="top">True</td><td valign="top">Cross</td><td valign="top">Gamma</td><td valign="top">0.018</td><td valign="top">0.034</td><td valign="top">4533</td><td valign="top">4757</td></tr>
+<tr><td valign="top">False</td><td valign="top">True</td><td valign="top">Cross</td><td valign="top">Beta</td><td valign="top">0.010</td><td valign="top">0.038</td><td valign="top">3684</td><td valign="top">4753</td></tr>
 </table>
 
 #### **Parameter analysis**
