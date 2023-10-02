@@ -2,11 +2,11 @@
 
 >First two columns: the time series of the signal.
 >
-So you can see that between times 0 and 0.182162 the signal was 0.0498… then it was 0.0638 until time 1.881267 etc…
-
-The other column "Trade Timestamps" is a list of trades. So you can see the first trade happened at time 0.021807, the next trade at time 11.46907
-
-We think the signal might be linked to the arrival of trades, what do you think?
+> So you can see that between times 0 and 0.182162 the signal was 0.0498… then it was 0.0638 until time 1.881267 etc…
+> 
+> The other column "Trade Timestamps" is a list of trades. So you can see the first trade happened at time 0.021807, the next trade at time 11.46907
+> 
+> We think the signal might be linked to the arrival of trades, what do you think?
 
 ## Approach
 
