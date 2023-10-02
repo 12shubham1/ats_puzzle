@@ -19,7 +19,11 @@ The goal was to try and identify a pattern between the signal data and trade dat
 
 ## Results
 
-Overall, it was identified that when the signal stayed constant for less than `N seconds`, there was a trade arriving/identified in the trade data. The parameter N was tuned using a grid search from `0.5 to 1.5 seconds`, with the following results:
+It was identified that the signal is linked to the trade data by the following patter:
+
+`If the signal stayed constant for less than N seconds (0.9s <= N <= 1s), there was a trade arriving/identified in the trade data.`
+
+The parameter N was tuned using a grid search from `0.5 to 1.5 seconds` (identified via trial and error), with the following results:
 
 ![image info](./imgs/parameter_tuning.png)
 
