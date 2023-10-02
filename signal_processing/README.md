@@ -27,7 +27,7 @@ The parameter N was tuned using a grid search from `0.5 to 1.5 seconds` (identif
 
 ![image info](./imgs/parameter_tuning.png)
 
-As evident, there was a parabolic increase in the percentage of trades identified as N was increased while `N > 0.9s` seconds ensured all trades were identified. However, as `N > 1s`, the number of incorrect predictions increased linearly, exceeding 100% of the number of trades as `N > 1.4s`. Therefore, a working window of `0.9s <= N <= 1s` was identified. The full pattern is documented here:
+As evident, there was a parabolic reduction in the percentage of trades missed as N was increased, while `N > 0.9s` seconds ensured all trades were identified/none missed. However, as `N > 1s`, the number of incorrect predictions increased linearly, exceeding 100% of the number of trades as `N > 1.4s`. Therefore, a working window of `0.9s <= N <= 1s` was obtained. The full pattern is documented here:
 
 | N | Correct (%) | Missing (%) | Wrong (%) |
 |:---:|:---:|:---:|:---:|
