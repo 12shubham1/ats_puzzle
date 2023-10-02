@@ -75,7 +75,7 @@ class ResultsAnalyzer:
     def force_log_norm(self):
 
         # Lognorm fit
-        shape, loc, scale = stats.lognorm.fit(self.data, floc=0)
+        shape, loc, scale = stats.lognorm.fit(self.data)
         _dist = stats.lognorm(shape, loc, scale)
         self.output_data['lognorm_kstest'] = stats.kstest(self.data, _dist.cdf)
         self.output_data['norm_mu'] = np.log(scale)

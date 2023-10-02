@@ -6,6 +6,7 @@ import time
 import config as c
 import pandas as pd
 import random
+pd.set_option('display.max_columns', None)
 random.seed(1)
 
 
