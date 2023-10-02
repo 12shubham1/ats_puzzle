@@ -19,7 +19,7 @@ The goal was to try and identify a pattern between the signal data and trade dat
 
 ## Results
 
-It was identified that the signal is linked to the trade data by the following patter:
+It was identified that the signal is linked to the arrival of trades by the following pattern:
 
 `If the signal stayed constant for less than N seconds (0.9s <= N <= 1s), there was a trade arriving/identified in the trade data.`
 
