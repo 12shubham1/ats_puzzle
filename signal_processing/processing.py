@@ -12,6 +12,9 @@ class Processor:
         self.trades = trades
     
     def align_signal_trades(self):
+        """
+        Concatenate the trade and signal data with a chronological index
+        """
         res = pd.concat([self.signal.data, self.trades.data], ignore_index=False)
         res = res.sort_index()
         res.fillna(method='ffill', inplace=True)
@@ -19,6 +22,11 @@ class Processor:
         self.combined = res
     
     def _identify_trend(self, threshold: float, plot:bool=False) -> Tuple[pd.DataFrame, pd.DataFrame]:
+        """
+        Analyze signal and predict trades based on the following trend:
+        - If signal is constant of 'threshold' or less, classify as a trade prediction
+        Based on the above metric, calculate missing and wrong predictions (which are returned)
+        """
 
         # Create copy (as df is mutable) to avoid side effects
         res = self.combined.copy()
@@ -57,6 +65,12 @@ class Processor:
         return missing, wrong
     
     def identify_trend_grid(self, grid:NDArray=np.linspace(0, 10), plot_grid:bool=False):
+        """
+        Accessor to the _identify_grid method with additional support to tune the 'threshold' hyperparameter. 
+        This method repeatedly calls _identify_trend across the grid specified. Results are stored in a dictionary
+        and plotted.
+        """
+
         missing = {}
         wrong = {}
         for i in grid:

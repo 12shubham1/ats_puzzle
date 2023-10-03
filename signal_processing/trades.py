@@ -2,6 +2,8 @@ import pandas as pd
 
 class Trades:
     def __init__(self, fpath:str):
+
+        # Read and massage trade data
         df = pd.read_csv(fpath)
         df_trades = df[['Trade Timestamps']]
         df_trades.dropna(inplace=True)
