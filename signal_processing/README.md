@@ -48,5 +48,3 @@ The full signal and trade data is plotted in the figures below. To demonstrate t
 
 ### 1.5s Time Window: All trades were picked up but there was also wrong predictions
 ![image info](./imgs/1_5s.png)
-
-## Additional Work
