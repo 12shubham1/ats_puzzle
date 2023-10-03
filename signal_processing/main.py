@@ -17,9 +17,9 @@ def main():
     process.align_signal_trades()
 
     # Wrapper around identify trend method allowing for parameter tuning
-    process.identify_trend_grid(grid=np.linspace(0, 1.5, 100, endpoint=False), plot_grid=True)
+    process.identify_trend_grid(grid=np.linspace(0.5, 1.5, 100, endpoint=False), plot_grid=True)
     process._identify_trend(threshold=0.5, plot=True)
-    process._identify_trend(threshold=0.95, plot=True)
+    process._identify_trend(threshold=1, plot=True)
     process._identify_trend(threshold=1.5, plot=True)
     plt.show(block=True)
 

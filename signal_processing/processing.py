@@ -22,8 +22,12 @@ class Processor:
 
         # Create copy (as df is mutable) to avoid side effects
         res = self.combined.copy()
-        # Calculate rolling difference on the index (timestamps)
-        res.loc[res.index[1:], 'time_same'] = np.diff(res.index)
+
+        # Need to perform diff on non trades df
+        self.signal.data.loc[self.signal.data.index[1:], 'time_same'] = np.diff(self.signal.data.index)
+        # Apply calc on combined df
+        res['time_same'] = self.signal.data['time_same']
+
         # when the signal is constant for less than the threshold (and its not a trade row) -> classify as trade
         mask = (res['time_same'] < threshold) & (res['Trade'] != 1.0)
         res.loc[mask, 'predict'] = 1
