@@ -40,4 +40,4 @@ Time permitting, future work recommended is as follows:
 1) Utilize parallel compute in python (or other languages) to increase the number of simulations for ants.
 2) Write unit tests for all code.
 3) Perform further validation, especially for ants, to check validity of simulations e.g. rules are being correctly applied. Unit, integration and regression tests will ensure this is achieved.
-4) Time series methods
+4) Use more advanced quantitative and statistical models -> this would be one of the areas I would enjoy learning the most about from the ATS team.
