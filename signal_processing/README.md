@@ -37,7 +37,7 @@ As evident, there was a linear reduction in the percentage of trades missed as N
 
 
 
-The full signal and trade data is plotted in the figures below. To demonstrate the impact of N, different comparisons are done where the constant time window is set to 0.5s, 0.95s and 1.5s.
+The full signal and trade data is plotted in the figures below. To demonstrate the impact of N, different comparisons are done where the constant time window is set to 0.5s, 1s and 1.5s.
 > Note: The figures are arbitrarily zoomed in to make it easier to identify the colour patterns. The user can run the code and look at the full picture in the interactive plots.
 
 ### 0.5s Time Window: Some trades were missed
