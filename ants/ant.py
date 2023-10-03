@@ -36,7 +36,7 @@ class Ant:
         """
         new_move = self.moveset.copy()
         state = 'ALL'
-        # If top_left
+        # Calculate state of ant based on board position
         if self.pos == [0,0]:
             state = 'TOP_LEFT'
         elif self.pos == [0, c.BOARD]:
@@ -56,6 +56,8 @@ class Ant:
         else:
             state = 'ALL'
         
+        # If backtrack not permitted, calculate prev move inverse i.e. move required
+        # to go back to previous square
         if not self.backtrack:
             if self.prev_prev is not None:
                 prev_move = {self.prev_prev[0]-self.prev[0], self.prev_prev[1]-self.prev[1]}
@@ -64,4 +66,5 @@ class Ant:
         else:
             prev_move = set()
 
+        # Identify all possible moves in current step
         return new_move.difference(c.REMOVE_MAP[state].union(prev_move))
