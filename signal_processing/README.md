@@ -8,6 +8,10 @@
 > 
 > We think the signal might be linked to the arrival of trades, what do you think?
 
+## Key Result
+
+The signal is indeed linked to the arrival of trades. In particular, if the `signal stayed constant for 1s or less`, there was a trade arriving/identified in the trade data.`
+
 ## Approach
 
 The goal was to try and identify a pattern between the signal data and trade data. The general methodology was as follows:
