@@ -5,7 +5,7 @@
 
 The prediction for time taken is summarized here:
 
-<table><thead><tr><th>Backtrack</th><th>True</th><th>False</th><th>True</th><th>False</th><th>True</th><th>False</th></tr></thead><tbody><tr><td>Diagonal</td><td>False</td><td>False</td><td>True</td><td>True</td><td>True</td><td>True</td></tr><tr><td>Objective</td><td>Meet</td><td>Meet</td><td>Meet</td><td>Meet</td><td>Cross</td><td>Cross</td></tr><tr><td>Time (s)<br>(lognormal <br>mean)</td><td>849</td><td>850</td><td>960</td><td>960</td><td>4757</td><td>4753</td></tr></tbody></table>
+<table><thead><tr><th>Backtrack</th><th>True</th><th>False</th><th>True</th><th>False</th><th>True</th><th>False</th></tr></thead><tbody><tr><td>Diagonal</td><td>False</td><td>False</td><td>True</td><td>True</td><td>True</td><td>True</td></tr><tr><td>Objective</td><td>Meet</td><td>Meet</td><td>Meet</td><td>Meet</td><td>Cross</td><td>Cross</td></tr><tr><td>Time (s)</td><td>849</td><td>850</td><td>960</td><td>960</td><td>4757</td><td>4753</td></tr></tbody></table>
 
 ## **Approach**
 
