@@ -32,3 +32,10 @@ To run the code for the signal processing, run the following commands (once this
 `python main.py`
 
 The results summary can be found in the `signal_processing/README.md` file
+
+
+## Future Work
+
+Time permitting, future work recommended is as follows:
+1) Utilize parallel compute in python (or other languages) to increase number of simulations for ants.
+2) Write unit tests for all code.
