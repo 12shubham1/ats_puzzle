@@ -10,7 +10,7 @@
 
 ## Key Result
 
-The signal is indeed linked to the arrival of trades. In particular, if the `signal stayed constant for 1s or less`, there was a trade arriving/identified in the trade data.`
+The signal is indeed linked to the arrival of trades. In particular, if the `signal stayed constant for 1s or less`, there was a trade arriving/identified in the trade data.
 
 ## Approach
 
