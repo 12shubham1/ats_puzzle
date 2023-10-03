@@ -1,7 +1,13 @@
 # Ants
 > Two ants start in opposite corners of a regular chessboard. Every 10 seconds, they move from the center of the square they're on to the center of an adjacent square. How long until they both land on the same square? How long until their paths cross (Ant A moving from square K to L and Ant B moving from square L to K)? What happens if we allow the ants to move diagonally? What happens if we restrict ants from moving to their immediately previous square?
 
-### **Approach**
+## **Key Result**
+
+The prediction for time taken is summarized here:
+
+<table><thead><tr><th>Backtrack</th><th>True</th><th>False</th><th>True</th><th>False</th><th>True</th><th>False</th></tr></thead><tbody><tr><td>Diagonal</td><td>False</td><td>False</td><td>True</td><td>True</td><td>True</td><td>True</td></tr><tr><td>Objective</td><td>Meet</td><td>Meet</td><td>Meet</td><td>Meet</td><td>Cross</td><td>Cross</td></tr><tr><td>Time (s)<br>(lognormal <br>mean)</td><td>849</td><td>850</td><td>960</td><td>960</td><td>4757</td><td>4753</td></tr></tbody></table>
+
+## **Approach**
 
 1) Run N simulations for the different input cases.
 
@@ -11,7 +17,7 @@
 
 4) Based on initial analysis, force a lognormal distribution on each sample. This allowed for a comparison of the impact of each variable in the problem: Backtrack, Diagonal and success condition (meet or cross).
 
-### **Results**
+## **Results**
 
 >Note: The results below can be replicated by using seed 1 `random.seed(1)` in `main.py` or similar results can be obtained by running the code directly without forcing a seed
 
@@ -30,7 +36,7 @@ For each case, 10,000 simulations were performed (this number provided a right b
 <tr><td valign="top">False</td><td valign="top">True</td><td valign="top">Cross</td><td valign="top">Beta</td><td valign="top">0.010</td><td valign="top">0.038</td><td valign="top">3684</td><td valign="top">4753</td></tr>
 </table>
 
-#### **Parameter analysis**
+### **Parameter analysis**
 
 From the above, there are 3 variables which were compared by forcing a lognormal distribution: 
 
@@ -51,7 +57,7 @@ The **quickest** time to meet (on average) is when `Backtrack=True`, `Diagonal=F
 
 For the case where `Objective=CROSS` and `Diagonal=False` (`Backtrack=TRUE or FALSE`), they cannot meet. The logic here is simple: to cross they must end up on different colour squares and this is not possible with adjacent moves only and starting on the same colour square. 
 
-##### **Variable Impact Summary**
+#### **Variable Impact Summary**
 |Variable|Backtrack|Diagonal|Meet or Cross|
 | :- | :- | :- | :- |
 |Impact|Low|Medium|High|
