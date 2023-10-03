@@ -9,9 +9,9 @@ Solving ATS ants and signal processing challenge.
 
 
 ## Possible Issues
-Within JP Morgan, getting the distfit package might require the user to follow these steps:
-1) Download the whl file from here: https://pypi.org/project/distfit/#files
-2) `pip install {whl file path}`
+Within JP Morgan, getting the distfit package might require the user to follow these steps (I've included the whl file in the repo):
+1) Comment out distfit in the requirements.txt file
+2) `pip install distfit-1.6.12-py3-none-any.whl`
 
 ## Question 1: Ants
 To run the code for ants, run the following commands (once this repo has been cloned):
