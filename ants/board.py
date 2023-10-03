@@ -45,7 +45,7 @@ class Board:
         # Evaluate if success criteria met
         return self.evaluate_state()
     
-    def evaluate_state(self):
+    def evaluate_state(self) -> bool:
         """
         Check if based on ants positions, the success criteria is met
         CROSS = (ant 1 previous = ant 2 current) & (ant 2 previous = ant 1 current)
