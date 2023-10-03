@@ -39,3 +39,4 @@ The results summary can be found in the `signal_processing/README.md` file
 Time permitting, future work recommended is as follows:
 1) Utilize parallel compute in python (or other languages) to increase number of simulations for ants.
 2) Write unit tests for all code.
+3) Perform further validation, especially for ants, to check validity of simulations e.g. rules are being correctly applied. Unit, integration and regression tests will ensure this is achieved.
