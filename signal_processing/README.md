@@ -21,18 +21,18 @@ The goal was to try and identify a pattern between the signal data and trade dat
 
 It was identified that the signal is linked to the arrival of trades by the following pattern:
 
-`If the signal stayed constant for less than N seconds (0.9s <= N <= 1s), there was a trade arriving/identified in the trade data.`
+`If the signal stayed constant for N <= 1s, there was a trade arriving/identified in the trade data.`
 
 The parameter N was tuned using a grid search from `0.5 to 1.5 seconds` (identified via trial and error), with the following results:
 
 ![image info](./imgs/parameter_tuning.png)
 
-As evident, there was a parabolic reduction in the percentage of trades missed as N was increased, while `N > 0.9s` seconds ensured all trades were identified/none missed. However, as `N > 1s`, the number of incorrect predictions increased linearly, exceeding 100% of the number of trades as `N > 1.4s`. Therefore, a working window of `0.9s <= N <= 1s` was obtained. The full pattern is documented here:
+As evident, there was a linear reduction in the percentage of trades missed as N was increased up to `N = 1s`, when all trades were identified. However, as `N > 1s`, the number of incorrect predictions increased linearly, exceeding 100% of the number of trades as `N > 1.4s`. Therefore, the optimal value is `N = 1s`.
 
 | N | Correct (%) | Missing (%) | Wrong (%) |
 |:---:|:---:|:---:|:---:|
-| Between 0.9s to 1s | 100 | 0 | 0 |
-| Less than 0.9s | < 100 | > 0 | 0 |
+| 1s | 100 | 0 | 0 |
+| Less than 1s | < 100 | > 0 | 0 |
 | Greater than 1s | 100 | 0 | > 0 |
 
 
@@ -43,7 +43,7 @@ The full signal and trade data is plotted in the figures below. To demonstrate t
 ### 0.5s Time Window: Some trades were missed
 ![image info](./imgs/0_5s.png)
 
-### 0.95s Time Window: All trades were picked up and no wrong predictions
+### 1s Time Window: All trades were picked up and no wrong predictions
 ![image info](./imgs/1s.png)
 
 ### 1.5s Time Window: All trades were picked up but there was also wrong predictions
