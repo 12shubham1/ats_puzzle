@@ -44,11 +44,11 @@ From the above, there are 3 variables which were compared by forcing a lognormal
 
 The appropriateness of this was studied visually and using the Kolmogorov-Smirnov (KS) test as a measure of ‘goodness of fit’ (see table above). The visual comparison is shown below where the log of the times taken is plotted as a histogram vs the underlying normal distribution backed out from the fitted lognormal distribution. This method is appropriate for all the ‘meet’ objective tests (first four) while it starts to deviate when the objective changes to ‘cross’.
 
-![image info](./imgs/lognormal_fits.png)
+![image info](./imgs/lognormal_fit.png)
 
 Overall, despite this deviation, this method still seems sufficiently robust to analyse the trends. This can be seen in the chart below:
 
-![image info](./imgs/lognormal_comparison.png)
+![image info](./imgs/lognormal_comparisons.png)
 
 
 The **quickest** time to meet (on average) is when `Backtrack=True`, `Diagonal=False` and `Objective=MEET` at `849s`, followed closely by setting `Backtrack=False` at `850s`. This pattern of `Backtrack` not making a big difference is noticed across all tests. The next significant change in pattern comes from setting `Diagonal=True` where we can see a higher expected time of `960s` and also a higher standard deviation in the plots. This suggests that despite the theoretical minimum (4 moves) being lower, the additional moves an ant can make from any given square increases both the time taken on average to meet and variation in these times (standard deviation increases from 0.75 to 0.85). Finally, setting `Objective=CROSS`, we can see the biggest jump in time taken to `4753s` (and increase in standard deviation too). This intuitively also makes sense as to cross paths, they must go onto opposite colour squares despite starting on the same colour square. This additional complexity is seen in the results.
