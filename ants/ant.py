@@ -60,7 +60,7 @@ class Ant:
         # to go back to previous square
         if not self.backtrack:
             if self.prev_prev is not None:
-                prev_move = {self.prev_prev[0]-self.prev[0], self.prev_prev[1]-self.prev[1]}
+                prev_move = {(self.prev_prev[0]-self.prev[0], self.prev_prev[1]-self.prev[1])}
             else:
                 prev_move = set()
         else:
