@@ -5,7 +5,7 @@
 
 The prediction for time taken is summarized here:
 
-<table><thead><tr><th>Backtrack</th><th>True</th><th>False</th><th>True</th><th>False</th><th>True</th><th>False</th><th>True</th><th>False</th></tr></thead><tbody><tr><td>Diagonal</td><td>False</td><td>False</td><td>True</td><td>True</td><td>False</td><td>False</td><td>True</td><td>True</td></tr><tr><td>Objective</td><td>Meet</td><td>Meet</td><td>Meet</td><td>Meet</td><td>Cross</td><td>Cross</td><td>Cross</td><td>Cross</td></tr><tr><td>Time (s)</td><td>849</td><td>850</td><td>960</td><td>960</td><td colspan="2">Not Possible</td><td>4533</td><td>3684</td></tr></tbody></table>
+<table><thead><tr><th>Backtrack</th><th>True</th><th>False</th><th>True</th><th>False</th><th>True</th><th>False</th><th>True</th><th>False</th></tr></thead><tbody><tr><td>Diagonal</td><td>False</td><td>False</td><td>True</td><td>True</td><td>False</td><td>False</td><td>True</td><td>True</td></tr><tr><td>Objective</td><td>Meet</td><td>Meet</td><td>Meet</td><td>Meet</td><td>Cross</td><td>Cross</td><td>Cross</td><td>Cross</td></tr><tr><td>Time (s)</td><td>849</td><td>570</td><td>965</td><td>704</td><td colspan="2">Not Possible</td><td>4568</td><td>3546</td></tr></tbody></table>
 
 ## **Approach**
 
@@ -27,13 +27,13 @@ For each case, 10,000 simulations were performed (this number provided a right b
 <table><tr><th colspan="3" valign="top">Test Name</th><th valign="top"></th><th colspan="2" valign="top">KS D-statistic (goodness of fit)</th><th colspan="2" valign="top">Expected time (seconds)</th></tr>
 <tr><td valign="top">Backtrack</td><td valign="top">Diagonal</td><td valign="top">Objective</td><td valign="top">Distribution</td><td valign="top">Best fit</td><td valign="top">Lognormal</td><td valign="top">Best fit</td><td valign="top">lognormal</td></tr>
 <tr><td valign="top">True</td><td valign="top">False</td><td valign="top">Meet</td><td valign="top">Lognormal</td><td valign="top">0.023</td><td valign="top">0.023</td><td valign="top">849</td><td valign="top">849</td></tr>
-<tr><td valign="top">False</td><td valign="top">False</td><td valign="top">Meet</td><td valign="top">Lognormal</td><td valign="top">0.025</td><td valign="top">0.025</td><td valign="top">850</td><td valign="top">850</td></tr>
-<tr><td valign="top">True</td><td valign="top">True</td><td valign="top">Meet</td><td valign="top">Lognormal</td><td valign="top">0.029</td><td valign="top">0.029</td><td valign="top">960</td><td valign="top">960</td></tr>
-<tr><td valign="top">False</td><td valign="top">True</td><td valign="top">Meet</td><td valign="top">Lognormal</td><td valign="top">0.026</td><td valign="top">0.026</td><td valign="top">960</td><td valign="top">960</td></tr>
+<tr><td valign="top">False</td><td valign="top">False</td><td valign="top">Meet</td><td valign="top">Gamma</td><td valign="top">0.017</td><td valign="top">0.035</td><td valign="top">570</td><td valign="top">588</td></tr>
+<tr><td valign="top">True</td><td valign="top">True</td><td valign="top">Meet</td><td valign="top">Lognormal</td><td valign="top">0.031</td><td valign="top">0.031</td><td valign="top">965</td><td valign="top">965</td></tr>
+<tr><td valign="top">False</td><td valign="top">True</td><td valign="top">Meet</td><td valign="top">Beta</td><td valign="top">0.025</td><td valign="top">0.032</td><td valign="top">705</td><td valign="top">877</td></tr>
 <tr><td valign="top">True</td><td valign="top">False</td><td valign="top">Cross</td><td colspan="5" rowspan="2" valign="top">*Not possible for ants to meet (explained below)</td></tr>
 <tr><td valign="top">False</td><td valign="top">False</td><td valign="top">Cross</td></tr>
-<tr><td valign="top">True</td><td valign="top">True</td><td valign="top">Cross</td><td valign="top">Gamma</td><td valign="top">0.018</td><td valign="top">0.034</td><td valign="top">4533</td><td valign="top">4757</td></tr>
-<tr><td valign="top">False</td><td valign="top">True</td><td valign="top">Cross</td><td valign="top">Beta</td><td valign="top">0.010</td><td valign="top">0.038</td><td valign="top">3684</td><td valign="top">4753</td></tr>
+<tr><td valign="top">True</td><td valign="top">True</td><td valign="top">Cross</td><td valign="top">Gamma</td><td valign="top">0.018</td><td valign="top">0.035</td><td valign="top">4568</td><td valign="top">4788</td></tr>
+<tr><td valign="top">False</td><td valign="top">True</td><td valign="top">Cross</td><td valign="top">Beta</td><td valign="top">0.017</td><td valign="top">0.037</td><td valign="top">3546</td><td valign="top">4630</td></tr>
 </table>
 
 ### **Parameter analysis**
