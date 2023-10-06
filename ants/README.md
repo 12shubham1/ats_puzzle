@@ -42,7 +42,7 @@ From the above, there are 3 variables which were compared by forcing a lognormal
 
 `Backtrack (bool)`, `Diagonal (bool)` and `Objective (str)`. 
 
-The appropriateness of this was studied visually and using the Kolmogorov-Smirnov (KS) test as a measure of ‘goodness of fit’ (see table above). The visual comparison is shown below where the log of the times taken is plotted as a histogram vs the underlying normal distribution backed out from the fitted lognormal distribution. This method is appropriate for all the ‘meet’ objective tests (first four) while it starts to deviate when the objective changes to ‘cross’.
+The appropriateness of this was studied visually and using the Kolmogorov-Smirnov (KS) test as a measure of ‘goodness of fit’ (see table above). The visual comparison is shown below where the log of the times taken is plotted as a histogram vs the underlying normal distribution backed out from the fitted lognormal distribution. This method seems to have a mixed accuracy across the board due to deviation visibile from the theoretical normal distribution in certain plots.
 
 ![image info](./imgs/lognormal_fit.png)
 
@@ -51,13 +51,13 @@ Overall, despite this deviation, this method still seems sufficiently robust to 
 ![image info](./imgs/lognormal_comparisons.png)
 
 
-The **quickest** time to meet (on average) is when `Backtrack=True`, `Diagonal=False` and `Objective=MEET` at `849s`, followed closely by setting `Backtrack=False` at `850s`. This pattern of `Backtrack` not making a big difference is noticed across all tests. The next significant change in pattern comes from setting `Diagonal=True` where we can see a higher expected time of `960s` and also a higher standard deviation in the plots. This suggests that despite the theoretical minimum (4 moves) being lower, the additional moves an ant can make from any given square increases both the time taken on average to meet and variation in these times (standard deviation increases from 0.75 to 0.85). Finally, setting `Objective=CROSS`, we can see the biggest jump in time taken to `4753s` (and increase in standard deviation too). This intuitively also makes sense as to cross paths, they must go onto opposite colour squares despite starting on the same colour square. This additional complexity is seen in the results.
+Comparing the lognormal distributions, the **quickest** time to meet (on average) is when `Backtrack=False`, `Diagonal=False` and `Objective=MEET` at `588s`, followed closely by setting `Diagonal=True` at `877s`. It should be noted that `Backtrack=False or True` has the biggest impact when `Diagonal=False` as the allowed number of moves (in most cases) goes from 4 to 3 i.e. a 25% reduction (when `Digonal=True`, the number of allowed move goes from 8 to 7 (12.5% reduction only)). However, the general pattern of `Backtrack=False` (all else being equal) having the quickest time across the board is noticed for every test. The next change in pattern comes from setting `Diagonal=True or False` where we can see a higher expected time and also a higher standard deviation in the plots. This suggests that despite the theoretical minimum (4 moves) being lower, the additional moves an ant can make from any given square increases both the time taken on average to meet and variation in these times. Finally, setting `Objective=CROSS`, we can see the biggest jump in time taken to around `4700s` (and increase in standard deviation too). This intuitively also makes sense as to cross paths, they must go onto opposite colour squares despite starting on the same colour square. This additional complexity is seen in the results.
 
-<table><thead><tr><th>Backtrack</th><th>True</th><th>False</th><th>True</th><th>False</th><th>True</th><th>False</th></tr></thead><tbody><tr><td>Diagonal</td><td>False</td><td>False</td><td>True</td><td>True</td><td>True</td><td>True</td></tr><tr><td>Objective</td><td>Meet</td><td>Meet</td><td>Meet</td><td>Meet</td><td>Cross</td><td>Cross</td></tr><tr><td>Time (s)<br>(lognormal <br>mean)</td><td>849</td><td>850</td><td>960</td><td>960</td><td>4757</td><td>4753</td></tr></tbody></table>
+<table><thead><tr><th>Backtrack</th><th>True</th><th>False</th><th>True</th><th>False</th><th>True</th><th>False</th></tr></thead><tbody><tr><td>Diagonal</td><td>False</td><td>False</td><td>True</td><td>True</td><td>True</td><td>True</td></tr><tr><td>Objective</td><td>Meet</td><td>Meet</td><td>Meet</td><td>Meet</td><td>Cross</td><td>Cross</td></tr><tr><td>Time (s)<br>(lognormal <br>mean)</td><td>849</td><td>588</td><td>965</td><td>877</td><td>4788</td><td>4630</td></tr></tbody></table>
 
 For the case where `Objective=CROSS` and `Diagonal=False` (`Backtrack=TRUE or FALSE`), they cannot meet. The logic here is simple: to cross they must end up on different colour squares and this is not possible with adjacent moves only and starting on the same colour square. 
 
 #### **Variable Impact Summary**
 |Variable|Backtrack|Diagonal|Meet or Cross|
 | :- | :- | :- | :- |
-|Impact|Low|Medium|High|
+|Impact|Medium|Low|High|
