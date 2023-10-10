@@ -54,5 +54,5 @@ The full signal and trade data is plotted in the figures below. To demonstrate t
 ![image info](./imgs/1_5s.png)
 
 
-<img src="https://api.segment.io/v1/pixel/track?data=ewogICJ3cml0ZUtleSI6ICJCY0ZjbmhOWWl2YVhTMGpRYm94S3VkSzFLZmFrcE1tSCIsCiAgInVzZXJJZCI6ICIxMnNodWJoYW0xQGdtYWlsLmNvbSIsCiAgImV2ZW50IjogIkhpdCIsCiAgInByb3BlcnRpZXMiOiB7CiAgICAiUGFnZSI6ICJTaWduYWwgUkVBRE1FIgogIH0KfQ==">
+<img src="https://api.segment.io/v1/pixel/track?data=ewogICJ3cml0ZUtleSI6ICJCY0ZjbmhOWWl2YVhTMGpRYm94S3VkSzFLZmFrcE1tSCIsCiAgInVzZXJJZCI6ICIxMnNodWJoYW0xQGdtYWlsLmNvbSIsCiAgImV2ZW50IjogIkhpdCBTaWduYWwiCn0=">
 
