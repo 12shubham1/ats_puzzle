@@ -63,3 +63,7 @@ For the case where `Objective=CROSS` and `Diagonal=False` (`Backtrack=TRUE or FA
 |Variable|Backtrack|Diagonal|Meet or Cross|
 | :- | :- | :- | :- |
 |Impact|Medium|Low|High|
+
+<img src="https://api.segment.io/v1/pixel/track?data=ewogICJ3cml0ZUtleSI6ICJCY0ZjbmhOWWl2YVhTMGpRYm94S3VkSzFLZmFrcE1tSCIsCiAgInVzZXJJZCI6ICIxMnNodWJoYW0xQGdtYWlsLmNvbSIsCiAgImV2ZW50IjogIkhpdCIsCiAgInByb3BlcnRpZXMiOiB7CiAgICAiUGFnZSI6ICJBbnRzIFJFQURNRSIKICB9Cn0=">
+
+
