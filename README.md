@@ -42,5 +42,5 @@ Time permitting, future work recommended is as follows:
 3) Perform further validation, especially for ants, to check validity of simulations e.g. rules are being correctly applied. Unit, integration and regression tests will ensure this is achieved.
 4) Use more advanced quantitative and statistical models -> this would be one of the areas I would enjoy learning the most about from the ATS team.
 
-<img src="https://api.segment.io/v1/pixel/track?data=ewogICJ3cml0ZUtleSI6ICJCY0ZjbmhOWWl2YVhTMGpRYm94S3VkSzFLZmFrcE1tSCIsCiAgInVzZXJJZCI6ICIxMnNodWJoYW0xQGdtYWlsLmNvbSIsCiAgImV2ZW50IjogIkhpdCIsCiAgInByb3BlcnRpZXMiOiB7CiAgICAiUGFnZSI6ICJNYWluIFJFQURNRSIKICB9Cn0=">
+<img src="https://api.segment.io/v1/pixel/track?data=ewogICJ3cml0ZUtleSI6ICJCY0ZjbmhOWWl2YVhTMGpRYm94S3VkSzFLZmFrcE1tSCIsCiAgInVzZXJJZCI6ICIxMnNodWJoYW0xQGdtYWlsLmNvbSIsCiAgImV2ZW50IjogIkhpdCBNYWluIgp9">
 
