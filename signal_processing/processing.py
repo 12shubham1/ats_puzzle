@@ -40,10 +40,16 @@ class Processor:
             ax.set_xlabel('Signal Step Time (s)')
             ax.set_ylabel('Frequency')
             fig.suptitle('Histogram of Signal Steps')
-        
-        return _cleaned
-        
 
+            fig, ax = plt.subplots()
+            c, b = np.histogram(_cleaned['signal'], len(_cleaned)//100)
+            ax.stairs(c, b)                                                  
+            ax.set_xlabel('Signal Strength')
+            ax.set_ylabel('Frequency')                                       
+            fig.suptitle('Histogram of Signal Strength')
+
+        return _cleaned
+    
     def profile_trade_to_signal(self, plot:bool=True) -> pd.Series:
         """
         Plot distribution of time between trade arriving and signal changing
