@@ -21,16 +21,13 @@ class Processor:
         
         # Massage the data to identify all rolling time steps
         _temp.reset_index(inplace=True)
-        _temp['Diff'] = _temp['Time'].rolling(2).apply(lambda x: x.iloc[1] - x.iloc[0])
+        _temp.at[1:, 'Diff'] = np.diff(_temp['Time'])
+        _temp['Remove'] = _temp['Trade'].astype(bool)
+        _temp['Remove'] = _temp['Remove'] | _temp['Remove'].shift(1) | _temp['Remove'].shift(-1)
         
         # Remove all trade + T-1, T+1 data points as these have been impacted by a
         # trade in some way
-        idx = list(_temp[_temp['Trade'] == 1].index)
-        idxs = set()
-        for i in idx:
-            idxs = idxs.union({i-1, i, i+1})
-        idxs = sorted(list(idxs))
-        _cleaned = _temp[~_temp.index.isin(idxs)]
+        _cleaned = _temp[_temp['Remove'] == False]
 
         # Plot the histogram
         if plot:
@@ -60,7 +57,7 @@ class Processor:
         _temp.reset_index(inplace=True)
         
         # Identify all cases where trade has happened
-        _temp['Diff'] = _temp['Time'].rolling(2).apply(lambda x: x.iloc[1] - x.iloc[0])
+        _temp.at[1:, 'Diff'] = np.diff(_temp['Time'])
         # Shift trade by 1 to tag next point as trade completion
         _temp['Next'] = _temp['Trade'].shift(1)
         # Get difference of only those points tagged as trade completion
