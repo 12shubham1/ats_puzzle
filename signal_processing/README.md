@@ -1,4 +1,4 @@
-# Signal Processing
+<img width="1265" alt="signal_strength" src="https://github.com/12shubham1/ats_puzzle/assets/49119053/0eee52b7-24b7-4ff9-90b6-55a66330dd1c"># Signal Processing
 
 >First two columns: the time series of the signal.
 >
@@ -60,16 +60,21 @@ The analysis thus far has identified a clear link between the signal and the tra
 
 ### Base Signal
 
-Through this decomposition, it is identified that the signal base is noise that stays constant between 1 to 2 seconds before alternating between low and high points. The noise can be modelled as follows and seen graphically below:
+Through this decomposition, it is identified that the signal base is noise that stays constant between 1 to 2 seconds before arbitrarily varying between different signal strengths. The noise can be modelled as follows and seen graphically below:
 
 `X~U(1,2)` where `X = Signal Step in seconds (time the signal stays constant for)`
 
 
 ![image info](./imgs/noise.png)
 
+The strength of the signal, with the information given, doesn't have much value. However, we can see the majority of the time, the signal has quite low strength. With further information about the trade, this could have a some value e.g. trade notional could be represented by signal strength.
+
+![image info](./imgs/signal_strength.png)
+
+
 ### Trade and Signal Processing Time
 
-One can also try to interpret the context between the trade list and signal. For example, it could be that this is the time taken for 'our' trading system to process the incoming trade e.g. update internal risk measures and/or update bid/offer spreads based on the direction of the trade. The longer processing times could be related to more involved positions (e.g. index or derivative contracts) while the more frequent, shorter times could be related to a simple spot trade. Further information would be required to figure out the specific nature of the 2 signals. However, as part of initial analysis, the distribution (histogram) of time taken between the trade arriving and the signal changing is shown here:
+One can also try to interpret the time taken between a trade arriving and the signal changing (`processing time`). For example, it could be that this is the time taken for 'our' trading system to process the incoming trade e.g. update internal risk measures and/or update bid/offer spreads based on the direction of the trade. The longer processing times could be related to more involved positions (e.g. index or derivative contracts) while the more frequent, shorter times could be related to a simple spot trade. Further information would be required to figure out the specific nature of the 2 signals. However, as part of initial analysis, the distribution (histogram) of time taken between the trade arriving and the signal changing is shown here:
 
 ![image info](./imgs/processing_time.png)
 
