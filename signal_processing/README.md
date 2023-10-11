@@ -56,7 +56,7 @@ The full signal and trade data is plotted in the figures below. To demonstrate t
 
 ## Signal Profiling
 
-The analysis thus far has identified a clear link between the link and the trade signal. With this knowledge, the original signal can be profiled by decomposing the signal into 2 as follows: `Signal = Signal Base + Trade Impact`
+The analysis thus far has identified a clear link between the signal and the trades. With this knowledge, the underlying signal can be profiled by decomposing the signal as follows: `Signal = Signal Base + Trade Impact`
 
 ### Base Signal
 
