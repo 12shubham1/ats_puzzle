@@ -60,14 +60,14 @@ The analysis thus far has identified a clear link between the signal and the tra
 
 ### Base Signal
 
-Through this decomposition, it is identified that the signal base is noise that stays constant between 1 to 2 seconds before arbitrarily varying between different signal strengths. The noise can be modelled as follows and seen graphically below:
+Through this decomposition, it is identified that the signal base is noise that stays constant between 1 to 2 seconds before arbitrarily varying between different signal strengths. The noise can be said to have 2 characteristics: `Step (time signal stays constant)` and `Strength (intensity of the signal at any point)`. The `Step` can be modelled as follows and seen graphically below:
 
 `X~U(1,2)` where `X = Signal Step in seconds (time the signal stays constant for)`
 
 
 ![image info](./imgs/noise.png)
 
-The strength of the signal, with the information given, doesn't provide much insight. However, we can see the majority of the time, the signal has quite low strength. With further information about the trade, this could have some meaning e.g. trade notional could be represented by signal strength.
+The `Strength` of the signal, with the information given, doesn't provide much insight. However, we can see the majority of the time, the signal has quite low strength. With further information about the trade, this could have some meaning e.g. trade notional could be represented by signal strength.
 
 ![image info](./imgs/signal_strength.png)
 
