@@ -11,6 +11,56 @@ class Processor:
         self.signal = signal
         self.trades = trades
     
+    def profile_signal(self, plot:bool=True) -> pd.DataFrame:
+        """
+        Identify pattern in underlying signal (with trades removed from it) 
+        """
+        _temp = self.combined.copy()
+        _temp.reset_index(inplace=True)
+        _temp['Diff'] = _temp['Time'].rolling(2).apply(lambda x: x.iloc[1] - x.iloc[0])
+        idx = list(_temp[_temp['Trade'] == 1].index)
+
+        idxs = set()
+        for i in idx:
+            idxs = idxs.union({i-1, i, i+1})
+        idxs = sorted(list(idxs))
+        _cleaned = _temp[~_temp.index.isin(idxs)]
+
+        if plot:
+            fig, ax = plt.subplots()
+            c, b = np.histogram(_cleaned['Diff'], len(_cleaned)//100)
+            ax.stairs(c, b)
+            ax.set_xlabel('Signal Step Time (s)')
+            ax.set_ylabel('Frequency')
+            fig.suptitle('Histogram of Signal Steps')
+        
+        return _cleaned
+        
+
+    def profile_trade_to_signal(self, plot:bool=True) -> pd.Series:
+        """
+        Plot distribution of time between trade arriving and signal changing
+        """
+        _temp = self.combined.copy()
+        _temp.reset_index(inplace=True)
+        _temp['Diff'] = _temp['Time'].rolling(2).apply(lambda x: x.iloc[1] - x.iloc[0])
+        _temp['Next'] = _temp['Trade'].shift(1)
+        mask = (_temp['Next'] == 1.0)
+        _temp.loc[mask, 'Process_Time'] = _temp['Diff']
+        pt = _temp['Process_Time']
+        pt.dropna(ignore_index=True, inplace=True)
+
+        if plot:
+            fig, ax = plt.subplots()
+            c, b = np.histogram(pt, len(pt)//100)
+            ax.stairs(c, b)
+            ax.set_xlabel('Processing Time (s)')
+            ax.set_ylabel('Frequency')
+            fig.suptitle('Histogram of Processing Time')
+
+        return pt
+        
+
     def align_signal_trades(self):
         """
         Concatenate the trade and signal data with a chronological index

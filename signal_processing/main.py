@@ -15,6 +15,8 @@ def main():
     # Instantiate signal processor
     process = Processor(sig, trd)
     process.align_signal_trades()
+    process.profile_signal(plot=True)
+    process.profile_trade_to_signal(plot=True)
 
     # Wrapper around identify trend method allowing for parameter tuning
     process.identify_trend_grid(grid=np.linspace(0.5, 1.5, 100, endpoint=False), plot_grid=True)
