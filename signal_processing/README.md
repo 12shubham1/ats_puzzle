@@ -1,4 +1,4 @@
-<img width="1265" alt="signal_strength" src="https://github.com/12shubham1/ats_puzzle/assets/49119053/0eee52b7-24b7-4ff9-90b6-55a66330dd1c"># Signal Processing
+# Signal Processing
 
 >First two columns: the time series of the signal.
 >
