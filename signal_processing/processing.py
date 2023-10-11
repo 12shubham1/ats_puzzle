@@ -15,17 +15,24 @@ class Processor:
         """
         Identify pattern in underlying signal (with trades removed from it) 
         """
+        
+        # Create a copy locally
         _temp = self.combined.copy()
+        
+        # Massage the data to identify all rolling time steps
         _temp.reset_index(inplace=True)
         _temp['Diff'] = _temp['Time'].rolling(2).apply(lambda x: x.iloc[1] - x.iloc[0])
+        
+        # Remove all trade + T-1, T+1 data points as these have been impacted by a
+        # trade in some way
         idx = list(_temp[_temp['Trade'] == 1].index)
-
         idxs = set()
         for i in idx:
             idxs = idxs.union({i-1, i, i+1})
         idxs = sorted(list(idxs))
         _cleaned = _temp[~_temp.index.isin(idxs)]
 
+        # Plot the histogram
         if plot:
             fig, ax = plt.subplots()
             c, b = np.histogram(_cleaned['Diff'], len(_cleaned)//100)
@@ -41,15 +48,22 @@ class Processor:
         """
         Plot distribution of time between trade arriving and signal changing
         """
+
+        # Create a local copy
         _temp = self.combined.copy()
         _temp.reset_index(inplace=True)
+        
+        # Identify all cases where trade has happened
         _temp['Diff'] = _temp['Time'].rolling(2).apply(lambda x: x.iloc[1] - x.iloc[0])
+        # Shift trade by 1 to tag next point as trade completion
         _temp['Next'] = _temp['Trade'].shift(1)
+        # Get difference of only those points tagged as trade completion
         mask = (_temp['Next'] == 1.0)
         _temp.loc[mask, 'Process_Time'] = _temp['Diff']
         pt = _temp['Process_Time']
         pt.dropna(ignore_index=True, inplace=True)
 
+        # Plot
         if plot:
             fig, ax = plt.subplots()
             c, b = np.histogram(pt, len(pt)//100)
