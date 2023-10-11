@@ -62,7 +62,7 @@ The analysis thus far has identified a clear link between the signal and the tra
 
 Through this decomposition, it is identified that the signal base is noise that stays constant between 1 to 2 seconds before alternating between low and high points. The noise can be modelled as follows and seen graphically below:
 
-`X~U(1,2)` where `X = Signal Step (time the signal stays constant for)`
+`X~U(1,2)` where `X = Signal Step in seconds (time the signal stays constant for)`
 
 
 ![image info](./imgs/noise.png)
