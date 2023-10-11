@@ -60,17 +60,18 @@ The analysis thus far has identified a clear link between the signal and the tra
 
 ### Base Signal
 
-Through this decomposition, it is identified that the signal base is noise that stays constant between 1 to 2 seconds before alternating between low and high points. The noise can be modelled as follows:
+Through this decomposition, it is identified that the signal base is noise that stays constant between 1 to 2 seconds before alternating between low and high points. The noise can be modelled as follows and seen graphically below:
 
 `X~U(1,2)` where `X = Signal Step (time the signal stays constant for)`
 
-The image below (LHS) shows this graphically.
+
+![image info](./imgs/noise.png)
 
 ### Trade and Signal Processing Time
 
-One can also try to interpret the context between the trade list and signal. For example, it could be that this is the time taken for 'our' trading system to process the incoming trade e.g. update internal risk measures and/or update bid/offer spreads based on the direction of the trade. The longer processing times could be related to more involved positions (e.g. index or derivative contracts) while the more frequent, shorter times could be related to a simple spot trade. Further information would be required to figure out the specific nature of the 2 signals. However, as part of initial analysis, the distribution (histogram) of time taken between the trade arriving and the signal changing is also show below (RHS)
+One can also try to interpret the context between the trade list and signal. For example, it could be that this is the time taken for 'our' trading system to process the incoming trade e.g. update internal risk measures and/or update bid/offer spreads based on the direction of the trade. The longer processing times could be related to more involved positions (e.g. index or derivative contracts) while the more frequent, shorter times could be related to a simple spot trade. Further information would be required to figure out the specific nature of the 2 signals. However, as part of initial analysis, the distribution (histogram) of time taken between the trade arriving and the signal changing is shown here:
 
-![image info](./imgs/profiled_signal.png)
+![image info](./imgs/processing_time.png)
 
 
 
