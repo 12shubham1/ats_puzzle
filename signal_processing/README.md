@@ -70,7 +70,7 @@ The image below (LHS) shows this graphically.
 
 One can also try to interpret the context between the trade list and signal. For example, it could be that this is the time taken for 'our' trading system to process the incoming trade e.g. update internal risk measures and/or update bid/offer spreads based on the direction of the trade. The longer processing times could be related to more involved positions (e.g. index or derivative contracts) while the more frequent, shorter times could be related to a simple spot trade. Further information would be required to figure out the specific nature of the 2 signals. However, as part of initial analysis, the distribution (histogram) of time taken between the trade arriving and the signal changing is also show below (RHS)
 
-![image info](./imgs/signal_profiling.png)
+![image info](./imgs/profiled_signal.png)
 
 
 
