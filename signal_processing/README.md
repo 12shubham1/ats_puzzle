@@ -67,7 +67,7 @@ Through this decomposition, it is identified that the signal base is noise that 
 
 ![image info](./imgs/noise.png)
 
-The strength of the signal, with the information given, doesn't have much value. However, we can see the majority of the time, the signal has quite low strength. With further information about the trade, this could have a some value e.g. trade notional could be represented by signal strength.
+The strength of the signal, with the information given, doesn't provide much insight. However, we can see the majority of the time, the signal has quite low strength. With further information about the trade, this could have some meaning e.g. trade notional could be represented by signal strength.
 
 ![image info](./imgs/signal_strength.png)
 
