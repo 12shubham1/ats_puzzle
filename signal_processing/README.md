@@ -54,5 +54,25 @@ The full signal and trade data is plotted in the figures below. To demonstrate t
 ![image info](./imgs/1_5s.png)
 
 
+## Signal Profiling
+
+The analysis thus far has identified a clear link between the link and the trade signal. With this knowledge, the original signal can be profiled by decomposing the signal into 2 as follows: `Signal = Signal Base + Trade Impact`
+
+### Base Signal
+
+Through this decomposition, it is identified that the signal base is noise that stays constant between 1 to 2 seconds before alternating between low and high points. The noise can be modelled as follows:
+
+`X~U(1,2)` where `X = Signal Step (time the signal stays constant for)`
+
+The image below (LHS) shows this graphically.
+
+### Trade and Signal Processing Time
+
+One can also try to interpret the context between the trade list and signal. For example, it could be that this is the time taken for 'our' trading system to process the incoming trade e.g. update internal risk measures and/or update bid/offer spreads based on the direction of the trade. The longer processing times could be related to more involved positions (e.g. index or derivative contracts) while the more frequent, shorter times could be related to a simple spot trade. Further information would be required to figure out the specific nature of the 2 signals. However, as part of initial analysis, the distribution (histogram) of time taken between the trade arriving and the signal changing is also show below (RHS)
+
+![image info](./imgs/signal_profiling.png)
+
+
+
 <img src="https://api.segment.io/v1/pixel/track?data=ewogICJ3cml0ZUtleSI6ICJCY0ZjbmhOWWl2YVhTMGpRYm94S3VkSzFLZmFrcE1tSCIsCiAgInVzZXJJZCI6ICIxMnNodWJoYW0xQGdtYWlsLmNvbSIsCiAgImV2ZW50IjogIkhpdCBTaWduYWwiCn0=">
 
